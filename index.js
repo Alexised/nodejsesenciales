@@ -9,6 +9,7 @@ app.use( bodyParser.json() );
 app.use( bodyParser.urlencoded({ extended: false }) );
 
 require("./routes/views")(app);
+require("./routes/api")(app);
 require("./routes/special")(app);
 
 console.log("Iniciando Express.js");
