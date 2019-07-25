@@ -18,6 +18,7 @@ app.get("*", (req, res)=>{
 async function initMongo(){
     const db = await mongo.connect();
     if(db) { initExpress(); }
+    
 }
 
 function initExpress() {

@@ -7,9 +7,9 @@ module.exports = {
         const resp = db.collection("films").find().toArray();
         return resp;
     },
-    getFilmByID: function(_id){
+    getFilmByID: function(id){
         const db = mongo.instance().db(DB_NAME);
-        const resp = db.collection("films").find({ _id }).toArray();
+        const resp = db.collection("films").find({id }).toArray();
         return resp;
     },
     postFilm: function(film) {
